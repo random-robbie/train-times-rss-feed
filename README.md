@@ -1,6 +1,8 @@
 # train-times-rss-feed
 Using the realtraintimes.co.uk / rtt.io json feed converting to a RSS feed.
 
+I know it's PHP but most webservers have it installed and i did not want to create a web server in go.
+
 I've done this for a LED sign i use so it can display it as it only takes RSS feeds.
 
 edit train.php
