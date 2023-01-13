@@ -19,15 +19,15 @@ header("Content-Type: application/rss+xml; charset=UTF-8");
 echo '<?xml version="1.0" encoding="UTF-8" ?>';
 echo '<rss version="2.0">';
 echo '<channel>';
-echo '<title>Train Services at '.$data['location']['name'].'</title>';
+echo '<title>Train Services From '.$data['location']['name'].'</title>';
 echo '<description>Train services at '.$data['location']['name'].'</description>';
 foreach($data['services'] as $service){
     echo '<item>';
     $first_part = substr($service['locationDetail']['gbttBookedDeparture'], 0, 2);
 	$second_part = substr($service['locationDetail']['gbttBookedDeparture'], 2);
 	$new_string = $first_part . ":" . $second_part;
-    echo '<title>'.$new_string.' to '.$data['filter']['destination']['name'].'</title>';
-    echo '<description>'.$service['atocName'].' train from '.$service['locationDetail']['origin'][0]['description'].' to '.$data['filter']['destination']['name'].'. Departing at '.$new_string.'</description>';
+    echo '<title>'.$new_string.' to '.$data['filter']['destination']['name'].' Departing from Platform '.$service['locationDetail']['platform'].'</title>';
+    echo '<description>'.$service['atocName'].' train from '.$service['locationDetail']['origin'][0]['description'].' to '.$data['filter']['destination']['name'].'. Departing at '.$new_string.' Departing from Platform '.$service['locationDetail']['platform'].'</description>';
     echo '</item>';
 }
 echo '</channel>';
