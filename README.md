@@ -39,6 +39,12 @@ This PHP script fetches real-time train departure information from the [Realtime
 
 Upload the `train.php` file to your web server. You can then access the RSS feed by navigating to the URL of the script in your web browser or RSS reader (e.g., `http://your-domain.com/train.php`).
 
+## Hosting
+
+You can run this on a VPS. If you sign up for DigitalOcean using the link below, you get $200 in credit for 60 days.
+
+[![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%203.svg)](https://www.digitalocean.com/?refcode=e22bbff5f6f1&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
+
 ## Example Output
 
 The generated RSS feed will look something like this:
